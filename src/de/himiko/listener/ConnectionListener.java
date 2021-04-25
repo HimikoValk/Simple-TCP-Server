@@ -48,8 +48,9 @@ public class ConnectionListener implements  Runnable{
                if(success)
                {
                    ConnectionHandler.INSTANCE.connections.add(clientConnection);
-                   System.out.println("[Server] Connection added" + clientConnection.getSocket().getLocalAddress());
-                   this.IP = clientConnection.getSocket().getLocalAddress();
+                  this.IP = clientConnection.getSocket().getLocalAddress();
+                   System.out.println("[Server] Connection added" + this.IP);
+                   
 
                }
 
