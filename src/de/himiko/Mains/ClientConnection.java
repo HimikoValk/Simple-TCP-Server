@@ -26,7 +26,7 @@ public class ClientConnection {
 
     }
 
-    public boolean dataOutInPut()
+    public boolean establish()
     {
         try{
             this.dataInputStream =  new DataInputStream(this.socket.getInputStream());
