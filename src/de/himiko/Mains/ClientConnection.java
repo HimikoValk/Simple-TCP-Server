@@ -23,7 +23,6 @@ public class ClientConnection {
     public ClientConnection(final Socket socket)
     {
         this.socket = socket;
-
     }
 
     public boolean establish()
