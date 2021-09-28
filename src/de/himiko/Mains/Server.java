@@ -5,7 +5,6 @@ package de.himiko.Mains;
  */
 
 import de.himiko.listener.ConnectionListener;
-import sun.misc.Cleaner;
 
 import java.net.ServerSocket;
 
@@ -28,9 +27,8 @@ public class Server {
             this.serverSocket = new ServerSocket(this.port);
             this.connectionListener = new ConnectionListener(this);
             this.connectionListener.start();
-
-
-            System.out.println("[Himiko Server] Server succesfully started on Port: " + this.port);
+            
+            System.out.println("[Server] Server succesfully started on Port: " + this.port);
         }catch (Exception e)
         {
            this.cancel();
@@ -40,7 +38,7 @@ public class Server {
 
     public void cancel()
     {
-        System.out.println("[Himiko Server] Server stopped");
+        System.out.println("[Server] Server stopped");
         try {
             this.connectionListener.cancel();
             this.serverSocket.close();
